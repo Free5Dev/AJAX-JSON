@@ -1,0 +1,31 @@
+------------------------------------------------1. Installation et configuration de l'environnement de travail -----------------------------------
+1 - Installation de server wamp sur windows
+2- Installation de node et npm
+3- Installation de yarn via => npm -g install => verification: yarn --v
+4- installation de jquery => yarn install jquery --save (c'est pour enresistrer les dependances )
+5- Initialisation des dependances : yarn init
+6- Mise à jour de la dependance : yarn upgrade
+
+NB: pour un petit projet partir de ajax de jquery et si gros projet partir sur angular ou react
+
+------------------------------------------------2. Format JSON en détails -----------------------------------
+1- API JSON en JS et API PLATEFORM en PHP
+2- editer un fichier user.txt et ecrire le format d'inspiration JSON
+3- Pour un objet json on met entre {} et pour une collection d'objet on met entre [ et à l'interieur on met entre { } ]
+4-JSON.stringify() tranforme une valeur JS en chaîne JSON Copier les données de user json partir dans la console de js et faire ceci :
+    a-) JSON.stringify("[{"firstname":"Said","last_name":"Soumah","date_naissance":"22/11","age":"28","sexe":"M","adresse":{"city":"Vtry sur seine","zip_code":"94400"}}]") <--|siginfier la touche entré
+    b-) copier la sortie de JSON.stringify et coller dans : 
+    var response='[{"firstname":"Said","last_name":"Soumah","date_naissance":"22/11","age":"28","sexe":"M","adresse":{"city":"Vtry sur seine","zip_code":"94400"}}]';  <--|siginfier la touche entré
+    c-) response  <--|siginfier la touche entré 
+
+5- JSON.parse() parse un json et le transforme en un objet 
+    a-) var firstItem=JSON.parse(response)[0] <--|siginfier la touche entré
+    firstItem.(affichera la liste des objets qu'on veut afficher)
+    b-) JSON.stringify(firstItem) // transformera en chaine json
+    c-) La difference entre du json et js est le type de valeur avec json tout est du texte et avec js ya vraiement une difference il int , string etcc 
+        *- parseInt(firstItem.age) //renvera le 20 en int 
+        *- firstItem.active==="TRUE" // renvera true en booleans 
+------------------------------------------------3. Les requêtes asynchrones  -----------------------------------
+1-Conseiller d'utiliser ajax avec jquery au lieu de XMLHttpRequest
+------------------------------------------------4.  Ajax avec Jquery -----------------------------------
+

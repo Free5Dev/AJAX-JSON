@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JSON, AJAX, Promise</title>
+</head>
+<body>
+    <div id="user">
+        <form action="" id="userForm">
+            <input type="text" name="firstName" id="" placeholder="votre firstName">
+            <input type="text" name="lastName" id="" placeholder="votre lastName">
+            <input type="text" name="age" id="" placeholder="votre age">
+            <input type="text" name="sex" id="" placeholder="votre sex">
+            <button type="submit">Envoyer</button>
+        </form>
+    </div>
+    <!-- script -->
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script>
+
+        var form=$('#userForm');
+        var url="http://localhost/ajax/";
+        var successCallback= function (response){
+            console.log(response);
+        }
+        var getOptions={
+            method: 'GET',
+            async: true, 
+            cache: false,
+            success: successCallback
+        };
+
+        
+
+        $.get(url, successCallback);
+        form.on('submit', function(e){
+            e.preventDefault();
+            getOptions.data=$(this).serialize();
+            $.ajax(url, getOptions);
+        });
+    </script>
+</body>
+</html>

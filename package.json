@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "jquery": "^3.4.1"
+  },
+  "name": "ajax",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT"
+}
